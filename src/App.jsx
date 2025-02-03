@@ -1,4 +1,15 @@
 import React from "react";
+// class Welcome extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     return <h1>Hello, {this.props.name}</h1>;
+//   }
+// }
+const Welcome = (props) => {
+  return <h1>Welcome {props.name}</h1>;
+};
 
 function App() {
   const name = "StarGazers";
@@ -9,9 +20,8 @@ function App() {
         {" "}
         <hgroup>
           <img src="images/group.svg" alt="StarGazers" />
-          <h1>
-            Meet the <i style={{ color: "SteelBLue" }}>{name}</i>
-          </h1>
+          <Welcome name="Stars" />
+          <Welcome name={name} />
           <p>
             Members of an <b>intergalactic alliance</b> paving the way for peace
             and benevolence among all species. They are known for their
